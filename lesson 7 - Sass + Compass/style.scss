@@ -1,0 +1,83 @@
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+ 	}
+}
+
+/* headers */
+
+header {
+	height: 300px;
+	h1 {
+		color: red;
+	}
+};
+
+/* classes */
+
+a {
+	&.warning {
+		color: red;
+	}
+	&.info {
+		color: blue;
+	}	
+}
+/* variables */
+$grey: #ccc;
+
+h1 {
+	color: $grey;
+}
+
+h2 {
+	color: darken($grey, 10%);
+}
+
+p {
+	color: $grey;
+}
+
+/* math functions */
+
+$width: 80%;
+$height: 20%;
+
+section {
+	width: $width;
+	height: $width - 20%;
+}
+
+/* mixins */
+@mixin zero($top-bottom: 0, $left-right: 0) {
+	margin: $top-bottom $left-right;
+	padding: $top-bottom $left-right;
+}
+
+ul {
+	@include zero(1em);
+}
+
+section {
+	@include zero(3em);
+}
+
+.container {
+	overflow: hidden;
+	width: 100%;
+	clear: left;
+}
+
+.main {
+	@extend .container;
+	background-color: red;
+}
+
+@import 'typography.scss';
+@import 'compass/css3';
+
+.box {
+	@include box-shadow(red 2px 2px 10px);
+}
+
