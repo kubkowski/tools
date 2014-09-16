@@ -1,0 +1,96 @@
+// silent comment
+
+/* normal comment */
+
+/* variables */
+
+@grey: #444;
+@red: red;
+@text: 'red';
+
+p {
+	color: @@text;
+}
+
+h1 {
+	color: @@text;
+}
+
+/* mixins */
+.spacing(@space: 0) {
+	padding: @space;
+	margin: @space;
+}
+
+ul {
+	.spacing
+}
+
+#footer {
+	.spacing(3em)
+}
+
+.mixin(bigger; @length){
+	width: @length*2;
+	height: @length*2;
+}
+
+.mixin(smaller; @length){
+	width: @length/2;
+	height: @length/2;
+}
+.mixin(@_; @length){
+	background-color: lightblue;
+	border-radius: 10px;
+}
+
+@small: smaller;
+@big: bigger;
+
+.box {
+	.mixin(@small, 100px);
+}
+
+.box2 {
+	.mixin(@big, 10px);
+}
+
+/* inheritance */
+#header {
+	p {
+		font-size: 12px;
+		a {
+			text-decoration: none;
+			&:hover {
+				border-width: 1px;
+			}
+		}
+	}
+}
+
+.a, .b, .c {
+	.parent {
+		color: black;
+	}
+}
+
+.a, .b, .c {
+	.parent & {
+		color: black;
+	}
+}
+
+/* scoping */
+
+@import 'lib';
+
+@main-color: white;
+
+.main {
+	@main-color: #444;
+	background-color: @main-color;
+	.sidebar {
+		@main-color: black;
+		background-color: @main-color;
+	}
+}

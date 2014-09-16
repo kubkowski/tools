@@ -1,0 +1,59 @@
+/* normal comment */
+/* variables */
+p {
+  color: #ff0000;
+}
+h1 {
+  color: #ff0000;
+}
+/* mixins */
+ul {
+  padding: 0;
+  margin: 0;
+}
+#footer {
+  padding: 3em;
+  margin: 3em;
+}
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: lightblue;
+  border-radius: 10px;
+}
+.box2 {
+  width: 20px;
+  height: 20px;
+  background-color: lightblue;
+  border-radius: 10px;
+}
+/* inheritance */
+#header p {
+  font-size: 12px;
+}
+#header p a {
+  text-decoration: none;
+}
+#header p a:hover {
+  border-width: 1px;
+}
+.a .parent,
+.b .parent,
+.c .parent {
+  color: black;
+}
+.parent .a,
+.parent .b,
+.parent .c {
+  color: black;
+}
+/* scoping */
+body {
+  font-size: 12px;
+}
+.main {
+  background-color: #444444;
+}
+.main .sidebar {
+  background-color: #000000;
+}
