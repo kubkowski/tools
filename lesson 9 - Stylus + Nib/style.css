@@ -1,0 +1,23 @@
+/* normal comment */
+/* not minified comment */
+/* variables */
+p {
+  $color: text-color;
+}
+h1 {
+  $color: text-color;
+}
+/* interpolation */
+button {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 0 #f00;
+  -moz-box-shadow: 0 0 0 #f00;
+  box-shadow: 0 0 0 #f00;
+}
+.box {
+  -webkit-box-shadow: 1px 1px 1px #000;
+  -moz-box-shadow: 1px 1px 1px #000;
+  box-shadow: 1px 1px 1px #000;
+}

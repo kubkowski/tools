@@ -1,0 +1,35 @@
+// silent comment
+
+/* normal comment */
+
+/*! not minified comment */
+
+/* variables */
+$text-color = blue
+
+p 
+	$color text-color
+h1 
+	$color text-color
+
+/* interpolation */
+vendor(property, arguments)
+	-webkit-{property} arguments
+	-moz-{property} arguments
+	{property} arguments
+
+border-radius()
+	vendor('border-radius', arguments)
+
+box-shadow(arguments...)
+	-webkit-box-shadow arguments
+	-moz-box-shadow arguments
+	box-shadow arguments
+
+
+button
+	border-radius: 10px
+	box-shadow: 0 0 0 red
+
+.box
+	box-shadow: 1px 1px 1px black
